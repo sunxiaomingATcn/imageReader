@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>fileReader图片上传预览</title>
+		<link rel="stylesheet" href="imageread.css" />
+		<style>
+			body {
+				background: #61B58D;
+			}
+			
+			.box {
+				position: relative;
+				width: 500px;
+				height: 150px;
+			}
+			
+			.meth textarea {
+				width: 800px;
+				height: 500px;
+				background: transparent;
+				border: 0px;
+				color: #FFF;
+				position: absolute;
+				top: 250px;
+				left: 0;
+				font-family: "microsoft yahei";
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box"></div>
+		<a style="position: absolute;top: 200px;left: 10px;" href="https://github.com/sunxiaomingATcn/sunxiaomingATcn.github.io/blob/master/SXM_DEMO/fileReader_plug_sxm">插件地址：</a>
+		<a style="position: absolute;top: 200px;left: 100px;" href="https://github.com/sunxiaomingATcn/sunxiaomingATcn.github.io/blob/master/SXM_DEMO/fileReader_plug_sxm">https://github.com/sunxiaomingATcn/sunxiaomingATcn.github.io/blob/master/SXM_DEMO/fileReader_plug_sxm</a>
+
+		<div class="meth">
+			<button onclick="getallfile()">打印当前所有file</button>
+			<textarea name="" rows="" cols="">
+使用方法
+var imageFile = new readImage({
+	Multiselect: true, //Boolean 允许多选，非必传，默认false
+	id: "file1", //自定义input file的id,非必传，默认body
+	unInitialization: false, //Boolean 不直接初始化，非必传，默认false，可调用init方法初始化imageFile.init()
+	maxNum: 4, //限制最大上传图片数量，非必传
+	Container: ".box", //上传容器，必须传值
+	readImageCallBack: function(file, base64Image, domImg) {} 
+	//每次预览后回调函数，传回三个参数，文件file对象、base64对象、dom对象
+})
+imageFile.getAllFile方法返回当前所有file
+
+		</textarea>
+		</div>
+	</body>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="Layer/layer.js"></script>
+	<script src="fileReader.js"></script>
+	<script>
+		//实例化
+		var imageFile = new readImage({
+			Multiselect: true, //Boolean 允许多选，非必传，默认false
+			id: "file1", //自定义input file的id,非必传，默认body
+			unInitialization: false, //Boolean 不直接初始化，非必传，默认false，可调用init方法初始化imageFile.init()
+			maxNum: 4, //限制最大上传图片数量，非必传
+			Container: ".box", //上传容器，必须传值
+			readImageCallBack: function(file, base64Image, domImg) {} 
+		})
+
+		function getallfile() {
+			//返回所有file
+			console.log(imageFile.getAllFile())
+		}
+	</script>
+
+</html>

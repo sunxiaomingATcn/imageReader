@@ -1,0 +1,89 @@
+.addImage {
+				float: left;
+				width: 80px;
+				height: 80px;
+				background: rgba(255, 255, 255, .5);
+				cursor: pointer;
+				border: 2px solid #FFF;
+				border-radius: 5px;
+				margin: 5px;
+			}
+			
+			.addImage img {
+				width: 20px;
+				display: block;
+				margin: 30px auto;
+			}
+			
+			.ImageDiv {
+				position: relative;
+				width: 80px;
+				height: 80px;
+				overflow: hidden;
+				float: left;
+				border: 2px solid #FFF;
+				border-radius: 5px;
+				margin: 5px;
+			}
+			
+			.readImage {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.cutImage {
+				position: absolute;
+				background: rgba(0, 0, 0, .2);
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+			
+			.cutImage img {
+				width: 20px;
+				display: block;
+				margin: 30px auto;
+			}
+			
+			.imageProgress {
+				width: 98%;
+				height: 10px;
+				position: absolute;
+				left: 1%;
+				bottom: 0px;
+				background: rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				-webkit-transition: opacity 0.3s ease-in;
+				transition: opacity 0.3s ease-in;
+				-webkit-transition-delay: .3s;
+				transition-delay: .3s;
+			}
+			
+			.imageProgress span {
+				background: rgba(0, 0, 0, 0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				border-radius: 5px;
+				-webkit-transition: width .35s ease-in-out;
+				-moz-transition: width .35s ease-in-out;
+				-ms-transition: width .35s ease-in-out;
+				-o-transition: width .35s ease-in-out;
+				transition: width .35s ease-in-out;
+			}
+			
+			.uploadImagePage {
+				/*float: right;*/
+				color: #FFF;
+			}
+			
+			a {
+				color: #FFF;
+				text-decoration: none;
+			}
+			
+			
